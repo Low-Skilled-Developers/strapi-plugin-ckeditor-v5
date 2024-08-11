@@ -41,6 +41,7 @@ export const LightConfig: EditorConfig = {
     'link', /*'strapiMediaLib',*/ 'insertTable',
     '|',
     'bulletedList', 'numberedList',
+    'SourceEditing',
   ],
   heading: {
     options: [
