@@ -124,7 +124,6 @@ export const CKEditorInput = ({
               ref={wordCounter}>
             </div>
           }
-          <div ref={wordCounter} />
           <Field.Hint />
           <Field.Error />
         </Flex>
