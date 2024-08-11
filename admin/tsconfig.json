@@ -1,0 +1,27 @@
+{
+  "extends": "@strapi/typescript-utils/tsconfigs/server.json",
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
+  "compilerOptions": {
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "strict": false,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  },
+  "paths": {
+//    "@/*": ["./src/*"],
+//    "~/*": ["../*"]
+  },
+  "include": ["./src", "./custom.d.ts"]
+}
