@@ -33,13 +33,11 @@ export const CKEditorInput = ({
 
   const [editorInstance, setEditorInstance] = useState<Editor | null>(null)
   const [uploadPluginConfig, setUploadPluginConfig] = useState(null);
+  const [mediaLibVisible, setMediaLibVisible] = useState(false)
+
   const wordCounter = useRef(null)
 
-
-
   const editorConfig = normalizeConfig(attribute.options)
-
-  const [mediaLibVisible, setMediaLibVisible] = useState(false)
 
   const handleToggleMediaLib = () => setMediaLibVisible(prev => !prev)
 
@@ -87,10 +85,14 @@ export const CKEditorInput = ({
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(`/${strapi.id}/config/upload`)
-      const uploadPluginConfig = await response.json()
+      try {
+        const response = await fetch(`/${strapi.id}/config/upload`)
+        const uploadPluginConfig = await response.json()
 
-      setUploadPluginConfig(uploadPluginConfig);
+        setUploadPluginConfig(uploadPluginConfig)
+      } catch(error) {
+        console.log(error)
+      }
     })();
   }, [])
 
@@ -115,6 +117,13 @@ export const CKEditorInput = ({
             onChange={onEditorChange}
             config={editorConfig}
           />
+          {
+            editorConfig.plugins.includes('WordCountPlugin') &&
+            <div
+              color={attribute.options.maxLengthCharacters ? "danger500" : "neutral400"}
+              ref={wordCounter}>
+            </div>
+          }
           <div ref={wordCounter} />
           <Field.Hint />
           <Field.Error />

@@ -46,6 +46,7 @@ export const StandardConfig: EditorConfig = {
     'link', /*'strapiMediaLib',*/ 'mediaEmbed', 'blockQuote', 'insertTable', 'codeBlock',
     '|',
     'bulletedList', 'numberedList', 'outdent', 'indent',
+    'SourceEditing',
   ],
   heading: {
     options: [
