@@ -5,16 +5,16 @@ import PluginIcon from '../assets/plugin-icon.svg'
 import { RegisterPluginOptions } from '../interfaces/register-plugin-options.interface'
 
 export const RegisterOptions: RegisterPluginOptions = {
-  pluginId: strapi.id,
-  name: strapi.name,
+  pluginId: strapi.name,
+  name: strapi.displayName,
   type: strapi.type as RegisterPluginOptions['type'],
   icon: () => <img src={PluginIcon as unknown as string} style={{ width: 24, height: 24 }} alt={'plugin image'}/>,
   intlLabel: {
-    id: `${strapi.id}.label`,
-    defaultMessage: strapi.name,
+    id: `${strapi.name}.label`,
+    defaultMessage: strapi.displayName,
   },
   intlDescription: {
-    id: `${strapi.id}.description`,
+    id: `${strapi.name}.description`,
     defaultMessage: 'The rich text editor for every use case',
   },
   components: {
@@ -24,11 +24,11 @@ export const RegisterOptions: RegisterPluginOptions = {
     base: [
       {
         intlLabel: {
-          id: `${strapi.id}.preset.label`,
+          id: `${strapi.name}.preset.label`,
           defaultMessage: 'Choose editor version',
         },
         description: {
-          id: `${strapi.id}.preset.description`,
+          id: `${strapi.name}.preset.description`,
           defaultMessage: "Do you need more or less features?",
         },
         name: 'options.preset',
@@ -40,7 +40,7 @@ export const RegisterOptions: RegisterPluginOptions = {
             value: 'light',
             metadatas: {
               intlLabel: {
-                id: `${strapi.id}.preset.light.label`,
+                id: `${strapi.name}.preset.light.label`,
                 defaultMessage: 'Light version',
               },
             },
@@ -50,7 +50,7 @@ export const RegisterOptions: RegisterPluginOptions = {
             value: 'standard',
             metadatas: {
               intlLabel: {
-                id: `${strapi.id}.preset.standard.label`,
+                id: `${strapi.name}.preset.standard.label`,
                 defaultMessage: 'Standard version',
               },
             },
@@ -60,7 +60,7 @@ export const RegisterOptions: RegisterPluginOptions = {
             value: 'rich',
             metadatas: {
               intlLabel: {
-                id: `${strapi.id}.preset.rich.label`,
+                id: `${strapi.name}.preset.rich.label`,
                 defaultMessage: 'Rich version',
               },
             },
@@ -69,11 +69,11 @@ export const RegisterOptions: RegisterPluginOptions = {
       },
       {
         intlLabel: {
-          id: `${strapi.id}.output.label`,
+          id: `${strapi.name}.output.label`,
           defaultMessage: 'Choose output type',
         },
         description: {
-          id: `${strapi.id}.output.description`,
+          id: `${strapi.name}.output.description`,
           defaultMessage: "Decide, whether you want to get your output in HTML or Markdown",
         },
         name: 'options.output',
@@ -85,7 +85,7 @@ export const RegisterOptions: RegisterPluginOptions = {
             value: 'HTML',
             metadatas: {
               intlLabel: {
-                id: `${strapi.id}.output.html.label`,
+                id: `${strapi.name}.output.html.label`,
                 defaultMessage: 'HTML',
               },
             },
@@ -95,7 +95,7 @@ export const RegisterOptions: RegisterPluginOptions = {
             value: 'Markdown',
             metadatas: {
               intlLabel: {
-                id: `${strapi.id}.output.markdown.label`,
+                id: `${strapi.name}.output.markdown.label`,
                 defaultMessage: 'Markdown',
               },
             },
@@ -111,11 +111,11 @@ export const RegisterOptions: RegisterPluginOptions = {
             name: 'required',
             type: 'checkbox',
             intlLabel: {
-              id: `${strapi.id}.required.label`,
+              id: `${strapi.name}.required.label`,
               defaultMessage: 'Required field',
             },
             description: {
-              id: `${strapi.id}.required.description`,
+              id: `${strapi.name}.required.description`,
               defaultMessage: "You won't be able to create an entry if this field is empty",
             },
           },
@@ -127,7 +127,7 @@ export const RegisterOptions: RegisterPluginOptions = {
             name: 'options.maxLengthCharacters',
             type: 'checkbox-with-number-field',
             intlLabel: {
-              id: `${strapi.id}.maxLength.label`,
+              id: `${strapi.name}.maxLength.label`,
               defaultMessage: 'Maximum length (characters)',
             },
           },
@@ -137,7 +137,7 @@ export const RegisterOptions: RegisterPluginOptions = {
     validator: () => (
       {
         preset: yup.string().required({
-          id: `${strapi.id}.preset.error.required`,
+          id: `${strapi.name}.preset.error.required`,
           defaultMessage: 'Editor preset is required',
         }),
       }

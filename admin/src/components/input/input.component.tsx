@@ -86,7 +86,7 @@ export const CKEditorInput = ({
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`/${strapi.id}/config/upload`)
+        const response = await fetch(`/${strapi.name}/config/upload`)
         const uploadPluginConfig = await response.json()
 
         setUploadPluginConfig(uploadPluginConfig)

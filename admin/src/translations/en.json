@@ -1,5 +1,5 @@
 {
-  "ckeditor5.label": "CKEditor",
+  "ckeditor5.label": "CKEditor5",
   "ckeditor5.description": "The is extended html editor",
   "ckeditor5.preset.label": "Choose editor version",
   "ckeditor5.preset.description": "Do you need more or less features?",

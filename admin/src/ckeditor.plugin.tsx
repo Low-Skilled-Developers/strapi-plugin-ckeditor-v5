@@ -19,11 +19,11 @@ export class CKEditorPlugin implements AdminInput {
 
     // NOTE: To add menu item
     // app.addMenuLink({
-    //   to: `plugins/${strapi.id}`,
+    //   to: `plugins/${strapi.name}`,
     //   icon: Cog,
     //   intlLabel: {
-    //     id: `${strapi.id}.plugin.name`,
-    //     defaultMessage: strapi.name,
+    //     id: `${strapi.name}.plugin.name`,
+    //     defaultMessage: strapi.displayName,
     //   },
     //   Component:  () => import('./pages/app').then((module) => ({ default: module.App }))
     // } as any)
