@@ -5,8 +5,8 @@ import { strapi as plugin } from '../../package.json'
 
 export function register({ strapi }: { strapi: Strapi }) {
   strapi.customFields.register({
-    plugin: plugin.id,
-    name: plugin.name,
+    plugin: plugin.name,
+    name: plugin.displayName,
     type: plugin.type as CustomFieldServerOptions['type'],
   })
 }

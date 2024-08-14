@@ -1,5 +1,10 @@
 {
   "extends": "@strapi/typescript-utils/tsconfigs/server.json",
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
   "compilerOptions": {
     "lib": ["ESNext"],
     "module": "ESNext",

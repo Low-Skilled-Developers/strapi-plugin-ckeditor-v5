@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-ckeditor-5",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CKEditor custom field plugin for Strapi CMS v5",
   "keywords": [
     "ckeditor",
