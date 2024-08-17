@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-ckeditor-5",
-  "version": "0.1.1",
+  "version": "5.0.1",
   "description": "CKEditor custom field plugin for Strapi CMS v5",
   "keywords": [
     "ckeditor",
@@ -77,26 +77,26 @@
     "sanitize-html": "^2.13.0"
   },
   "devDependencies": {
-    "@strapi/sdk-plugin": "^5.0.2",
-    "@strapi/strapi": "^5.0.0-rc.9",
-    "@strapi/typescript-utils": "^5.0.0-rc.9",
+    "@strapi/sdk-plugin": "^5.1.0",
+    "@strapi/strapi": "^5.0.0-rc.10",
+    "@strapi/typescript-utils": "^5.0.0-rc.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/sanitize-html": "^2.11.0",
     "prettier": "^4.0.0-alpha.9",
-    "react": "^19.0.0-rc-fb9a90fa48-20240614",
-    "react-dom": "^19.0.0-rc-fb9a90fa48-20240614",
-    "react-router-dom": "^6.26.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
     "styled-components": "^6.1.12",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "@strapi/sdk-plugin": "^5.0.2",
-    "@strapi/strapi": "^5.0.0-rc.9",
-    "react": "^19.0.0-rc-fb9a90fa48-20240614",
-    "react-dom": "^19.0.0-rc-fb9a90fa48-20240614",
-    "react-router-dom": "^6.26.0",
+    "@strapi/sdk-plugin": "^5.1.0",
+    "@strapi/strapi": "^5.0.0-rc.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
     "styled-components": "^6.1.12"
   },
   "homepage": "https://github.com/Low-Skilled-Developers/strapi-plugin-ckeditor-v5#readme",

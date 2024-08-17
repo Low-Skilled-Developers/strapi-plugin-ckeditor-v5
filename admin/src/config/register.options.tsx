@@ -18,7 +18,7 @@ export const RegisterOptions: RegisterPluginOptions = {
     defaultMessage: 'The rich text editor for every use case',
   },
   components: {
-    Input: async () => await import('../components/input').then((module) => ({ default: module.CKEditorInput }))
+    Input: () => import('../components/input').then((module) => ({ default: module.CKEditorInput }))
   },
   options: {
     base: [

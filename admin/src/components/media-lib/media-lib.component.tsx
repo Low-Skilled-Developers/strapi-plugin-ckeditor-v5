@@ -1,4 +1,5 @@
-// import componentsRegistry from '@strapi/core/dist/registries/components'
+// @ts-ignore
+// import { useStrapiApp } from '@strapi/admin/strapi-admin'
 
 import { prefixFileUrlWithBackendUrl } from '../../utils/prefix-file-url-with-backend-url'
 import { MediaLibFile } from './interfaces/media-lib-file.interface'
@@ -10,6 +11,7 @@ export const MediaLib = ({
   editor,
   uploadConfig
 }: MediaLibProps) => {
+  // const app = useStrapiApp('media-library', (app) => app)
   // const MediaLibraryDialog = componentsRegistry().get('media-library')
 
   const handleSelectAssets = (files: MediaLibFile[]) => {

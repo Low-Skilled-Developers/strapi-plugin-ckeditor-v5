@@ -16,17 +16,6 @@ export class CKEditorPlugin implements AdminInput {
 
   public register = (app: StrapiApp) => {
     app.customFields.register(RegisterOptions as any)
-
-    // NOTE: To add menu item
-    // app.addMenuLink({
-    //   to: `plugins/${strapi.name}`,
-    //   icon: Cog,
-    //   intlLabel: {
-    //     id: `${strapi.name}.plugin.name`,
-    //     defaultMessage: strapi.displayName,
-    //   },
-    //   Component:  () => import('./pages/app').then((module) => ({ default: module.App }))
-    // } as any)
   }
 
   public registerTrads: AdminInput['registerTrads'] = async ({ locales }) => {

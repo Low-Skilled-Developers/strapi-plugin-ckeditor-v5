@@ -18,8 +18,9 @@ export const common = css`
     --ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
     --ck-todo-list-checkmark-size: 16px;
     --ck-font-size-normal: 1rem;
-  }
 
+    --ck-input-min-height: 12.5rem;
+  }
 
   .ck.ck-sticky-panel .ck-sticky-panel__content_sticky {
     top: 64px !important;
@@ -129,7 +130,7 @@ export const common = css`
 
     .ck.ck-content.ck-editor__editable {
       line-height: initial;
-      min-height: 12.5rem;
+      min-height: var(--ck-input-min-height);
       border-bottom-left-radius: 0.25rem;
       border-bottom-right-radius: 0.25rem;
       transition-property: border-color, box-shadow, max-height;
@@ -174,6 +175,10 @@ export const common = css`
         background: var(--ck-scroll-thumb-active-background);
       }
     }
+  }
+
+  .ck .ck-source-editing-area {
+    min-height: var(--ck-input-min-height);
   }
 
   .ck .ck-source-editing-area textarea {

@@ -1,8 +1,8 @@
 import { EditorConfig, Markdown } from 'ckeditor5'
 
 import { LightConfig } from './config-presets/light.config'
-import { RichConfig } from './config-presets/rich.config'
 import { StandardConfig } from './config-presets/standard.config'
+import { RichConfig } from './config-presets/rich.config'
 
 interface FieldConfig extends Record<string, any> {
   maxLengthCharacters?: number
